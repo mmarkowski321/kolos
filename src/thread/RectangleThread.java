@@ -26,7 +26,7 @@ public class RectangleThread extends Thread {
             try {
                 sleep(20);
             } catch (InterruptedException e) {
-                break; // Thread interrupted
+                break;
             }
         }
     }
@@ -52,13 +52,11 @@ public class RectangleThread extends Thread {
         }
 
         if (y1 > panel.getHeight() || y2 > panel.getHeight()) {
-            // Reset rectangle position when it reaches the bottom
             y1 = 0;
             y2 = y1 + Math.abs(y2 - y1);
         }
 
         if (x1 > panel.getWidth() || x2 > panel.getWidth()) {
-            // Reset rectangle position when it reaches the right edge
             x1 = 0;
             x2 = x1 + Math.abs(x2 - x1);
         }
